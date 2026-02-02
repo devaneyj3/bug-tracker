@@ -52,6 +52,25 @@ header h1 {
   margin-bottom: 0.75rem;
 }
 
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .stack {
   display: grid;
   gap: 0.75rem;
@@ -80,17 +99,30 @@ header h1 {
   width: 100%;
   text-align: left;
   border: 1px solid #cbd5e1;
-  background: black;
+  background: #f8fafc;
+  color: #0f172a;
   border-radius: 10px;
   padding: 0.75rem;
   cursor: pointer;
   display: grid;
   gap: 0.4rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.list-button:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
 }
 
 .list-button.active {
-  border-color: green;
-  background: green;
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.list-button.active .muted {
+  color: #dbeafe;
 }
 
 .list-row {
@@ -98,6 +130,26 @@ header h1 {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detail-meta {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .pill {
